@@ -1,0 +1,64 @@
+\documentclass{article} % Document class
+
+\usepackage[utf8]{inputenc} % Input encoding
+\usepackage[letterpaper, margin=1in]{geometry} % Page layout
+\usepackage{amsmath, amssymb} % Math packages
+\usepackage{enumitem} % Package for customizing lists
+
+% Customization of enumeration environment
+\setlist[enumerate]{label=\arabic*., leftmargin=*, topsep=2pt, partopsep=2pt, parsep=2pt, itemsep=2pt}
+
+% Header customization
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{} % Empty left header
+\rhead{Date: \today} % Right header content (change "\today" to desired date format)
+
+\begin{document}
+    \section*{Introduction} % Exercise set title (unnumbered)
+    
+    \subsection*{Exercises} % Section for exercises (unnumbered)
+    
+    \begin{enumerate}
+        \item \textbf{Exercise 1:}
+        \begin{itemize}
+            \item[(a)] We have \(2^{15} - 1 = 32767 = 1057 \cdot 31 = 4681 \cdot 7\).
+            \item[(b)] We know that \(32767 = 1057 \cdot 31\), we have \(2^{32767} - 1\) divisible by \(2^{31} - 1\) (since \(2^{32767} - 1 = (2^{31} - 1)(1 + 2^{31} + 2^{2 \cdot 31} + \dots + 2^{1056 \cdot 31})\)) and \(1 < 2^{31} - 1 < 2^{32767} - 1\).
+        \end{itemize}
+        
+        \item \textbf{Exercise 2:}
+        \begin{table}[h]
+            \begin{tabular}{llllll}
+                \hline
+                \textbf{\(n\)} & \textbf{is \(n\) prime?} & \textbf{\(3^{n} - 1\)} & \textbf{is \(3^{n} - 1\) prime?} & \textbf{\(3^{n} - 2^{n}\)} & \textbf{is \(3^{n} - 2^{n}\) prime?} \\ \hline
+                2            & yes                    & 8                    & no                             & 5                        & yes                                \\
+                3            & yes                    & 26                   & no                             & 19                       & yes                                \\
+                4            & no                     & 80                   & no                             & 65                       & no                                 \\
+                5            & yes                    & 242                  & no                             & 211                      & yes                                \\
+                6            & no                     & 720                  & no                             & 665                      & no                                 \\
+                7            & yes                    & 2186                 & no                             & 2059                     & no?                                \\ \hline
+            \end{tabular}
+        \end{table}
+
+        \textbf{Conjecture 1.} Suppose \(n\) is an integer, if \(n > 0\) then \(3^{n} - 1\) is not prime.
+
+        \item \textbf{Exercice 3:}
+        \begin{itemize}
+            \item[(a)] Let \(m = 2 \cdot  3 \cdot 5 \cdot 7 + 1 = 211\), by theorem 3 \(m\) is prime.
+            \item[(b)] Let \(m = 2 \cdot 5 \cdot 11 + 1 = 111\) is not prime since \(111 = 3 \cdot 37\), thus it yields two primes.
+        \end{itemize}
+
+        \item \textbf{Exercice 4:}
+        Let \(x = (5 + 1)! + 2 = 6! + 2\), Hence by theorem 4, we gave \(722, 723, 724, 725, 726\) are not primes.
+        
+        \item \textbf{Exercice 5:}
+        We have \(2^{5} - 1 = 31\), Hence according to Euclid \(2^{5 - 1}(2^{5} - 1) = 496\) is perfect.
+
+        \item \textbf{Exercice 6:}
+        Let's suppose that there exist such "triplet primes": \((n, n + 2, n + 4)\) where \(n \geq 5\), \(n\) could be written as follows, either \(n = 3k + 1\) or \(n = 3k + 2\). If \(n = 3k + 1\) then \(n + 2 = 3k + 3 = 3(k + 1)\) which is divisible by 3, thus contradicting the fact that \(n + 2\) is prime and our supposition. If \(n = 3k + 2\) then \(n + 4 = 3k + 6 = 3(k + 2)\) which is divisible by 3, thus contradicting the fact that \(n + 4\) is prime. Hence in all cases of \(n\) we end up with a contradiction, we can then conclude that there are no "triplet primes" for all \(n \geq 5\).
+
+
+        % Add more exercises as needed
+    \end{enumerate}
+    
+\end{document}

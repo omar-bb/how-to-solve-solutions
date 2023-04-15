@@ -1,0 +1,31 @@
+\documentclass{article} % Document class
+
+\usepackage[utf8]{inputenc} % Input encoding
+\usepackage[letterpaper, margin=1in]{geometry} % Page layout
+\usepackage{amsmath, amssymb} % Math packages
+\usepackage{enumitem} % Package for customizing lists
+
+% Customization of enumeration environment
+\setlist[enumerate]{label=\arabic*., leftmargin=*, topsep=2pt, partopsep=2pt, parsep=2pt, itemsep=2pt}
+
+% Header customization
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{} % Empty left header
+\rhead{Date: \today} % Right header content (change "\today" to desired date format)
+
+\begin{document}
+    \section*{Introduction} % Exercise set title (unnumbered)
+    
+    \subsection*{Exercises} % Section for exercises (unnumbered)
+    
+    \begin{enumerate}
+        \item \textbf{Exercise 1:}
+        \begin{itemize}
+            \item[(a)] Let \(P\) stand for "We'll have a reading assignment", \(Q\) for "We'll have a homework problem" and \(R\) for "We'll have a test", then \[(P \vee Q) \wedge \neg (Q \wedge R)\].
+            \item[(b)] Let \(P\) stand for "You will go skiing" and \(Q\) for "There will be snow", then \[\neg P \vee (P \wedge \neg Q)\]
+            \item[(c)] \( \neg [(\sqrt{7} < 2) \wedge (\sqrt{7} - 2)] \)
+        \end{itemize} 
+    \end{enumerate}
+\end{document}
+    

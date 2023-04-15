@@ -60,7 +60,92 @@
 
         \item \textbf{Exercise 6:}
         \begin{itemize}
-            \item[(a)] Either Steve is happy or George is happy, but either of them is not.
+            \item[(a)] Either Steve is happy or George is happy, but not both.
+            \item[(b)] Either George is not happy or Steve is happy or George is happy and Steve is not. \\
+            \dots
+        \end{itemize}
+        
+        \item \textbf{Exercise 7:}
+        \begin{itemize}
+            \item[(a)] \textbf{The Premises:}
+            \begin{align*}
+                &\text{Jane and Pete won't both win the math prize.} \\
+                &\text{Pete will win either the math prize or the chemistry prize.} \\
+                &\text{Jane will win the math prize.}
+            \end{align*}
+            \textbf{The Conclusion:} Pete will win the chemistry prize. \\
+            Let \(J\) stand for "Jane will win the math prize", \(P\) for "Pete will win the math prize", and \(C\) for "Pete will win the chemistry prize". \\
+            \textbf{Logical Forms:}
+            \begin{align*}
+                &\text{Premise 1:} && \neg (J \wedge P) \\
+                &\text{Premise 2:} && P \vee C \\
+                &\text{Premise 3:} && J \\
+                &\text{Conclusion:} && C 
+            \end{align*} \\
+            \textbf{Reasoning is valid:} The reasoning is valid since by the third premise Jane won the math prize, by the first premise Pete didn't win it and by the second premise Pete will either win the math or chemistry prize and since he didn't win the math prize, thus he won the chemistry prize.
+
+            \item[(b)] \textbf{The Premises:}
+            \begin{align*}
+                &\text{The main course will be either beef or fish.} \\
+                &\text{The vegetable will be either peas or corn.} \\
+                &\text{We will not have both fish as a main course and corn as a vegetable.}
+            \end{align*}
+            \textbf{The Conclusion:} We will not have both beef as a main course and peas as a vegetable. \\
+            Let \(B\) stand for "The main course will be beef", \(F\) for "The main course will be fish", \(P\) for "The vegetable will be peas" and \(C\) for "The vegetable will be corn" \\
+            \textbf{Logical Forms:}
+            \begin{align*}
+                &\text{Premise 1:} && B \vee F \\
+                &\text{Premise 2:} && P \vee C \\
+                &\text{Premise 3:} && \neg (F \wedge C) \\
+                &\text{Conclusion:} && \neg (B \wedge P) 
+            \end{align*} \\
+            \textbf{Reasoning is valid:} The reasoning isn't valid since you can't have both fish and corn, and you can either have beef or fish for the main course and either corn or peas as a vegetable so you can end up with beef and peas 
+
+            \item[(b)] \textbf{The Premises:}
+            \begin{align*}
+                &\text{The main course will be either beef or fish.} \\
+                &\text{The vegetable will be either peas or corn.} \\
+                &\text{We will not have both fish as a main course and corn as a vegetable.}
+            \end{align*}
+            \textbf{The Conclusion:} We will not have both beef as a main course and peas as a vegetable. \\
+            Let \(B\) stand for "The main course will be beef", \(F\) for "The main course will be fish", \(P\) for "The vegetable will be peas" and \(C\) for "The vegetable will be corn" \\
+            \textbf{Logical Forms:}
+            \begin{align*}
+                &\text{Premise 1:} && B \vee F \\
+                &\text{Premise 2:} && P \vee C \\
+                &\text{Premise 3:} && \neg (F \wedge C) \\
+                &\text{Conclusion:} && \neg (B \wedge P) 
+            \end{align*} \\
+            \textbf{Reasoning is valid:} The reasoning isn't valid since you can't have both fish and corn, and you can either have beef or fish for the main course and either corn or peas as a vegetable so you can end up with beef and peas 
+
+            \item[(c)] \textbf{The Premises:}
+            \begin{align*}
+                &\text{Either John or Bill is telling the truth.} \\
+                &\text{Either Sam or Bill is lying.} \\
+            \end{align*}
+            \textbf{The Conclusion:} Either John is telling the truth or Sam is lying. \\
+            Let \(J\) stand for "John is telling the truth", \(B\) for "Bill is telling the truth" and \(S\) for "Sam is telling the truth" \\
+            \textbf{Logical Forms:}
+            \begin{align*}
+                &\text{Premise 1:} && J \vee B \\
+                &\text{Premise 2:} && \neg S \vee \neg B \\
+                &\text{Conclusion:} && J \vee \neg S 
+            \end{align*} \\
+            \textbf{Reasoning is valid:} The reasoning seems valid since the only one who can affect the outcome of the premises combined is Bill since, if Bill is lying then John and Sam are telling the truth and if Bill is telling the truth then John and Sam are lying, These are the two possible outcomes, Hence the conclusion is right since Either John is telling the truth or Sam is lying but you can't have both
+
+            \item[(d)] \textbf{The Premises:}
+            \begin{align*}
+                &\text{Either sales will go up and the boss will be happy, or expenses will go up and the boss won't be happy.}
+            \end{align*}
+            \textbf{The Conclusion:} Sales and expenses will not both go up. \\
+            Let \(S\) stand for "The sales will go up", \(B\) for "The boss will be happy" and \(E\) for "The expenses will go up". \\
+            \textbf{Logical Forms:}
+            \begin{align*}
+                &\text{Premise 1:} && (S \wedge B) \vee (E \wedge \neg B) \\
+                &\text{Conclusion:} && \neg (S \wedge E) 
+            \end{align*} \\
+            \textbf{Reasoning is valid:} https://math.stackexchange.com/questions/1120978/propositional-logic-problem-sales-expenses-and-happiness-of-the-boss
+
         \end{itemize}
     \end{enumerate}
 \end{document}

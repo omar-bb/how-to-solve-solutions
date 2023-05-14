@@ -15,7 +15,7 @@
 \rhead{Date: \today} % Right header content (change "\today" to desired date format)
 
 \begin{document}
-    \section*{Introduction} % Exercise set title (unnumbered)
+    \section{Deductive Reasoning and Logical Connectives} % Exercise set title (unnumbered)
     
     \subsection*{Exercises} % Section for exercises (unnumbered)
     
@@ -148,5 +148,70 @@
 
         \end{itemize}
     \end{enumerate}
+    \newpage
+    \section{Truth Tables}
+    \subsection*{Examples}
+
+    \subsubsection*{Example 1.2.1:}
+
+    Make a truth table for the formula $\neg (P \vee \neg Q)$.
+
+    \begin{center}
+    \begin{tabular}{ c c c c c }
+        $P$ & $Q$ & $\neg Q$ & $P \vee \neg Q$ & $\neg (P \vee \neg Q)$ \\ \hline
+        F & F & T & T & F \\
+        F & T & F & F & T \\
+        T & F & T & T & F \\
+        T & T & F & T & F
+    \end{tabular}
+    \end{center}
+
+    \subsubsection*{Example 1.2.2:}
+
+    Make a truth table for the formula $\neg (P \wedge Q) \vee \neg R$.
+
+    \begin{center}
+    \begin{tabular}{ c c c c c c c }
+        $P$ & $Q$ & $R$ & $\neg R$ & $P \wedge Q$ & $\neg (P \wedge Q)$ & $\neg (P \wedge Q) \vee \neg R$ \\ \hline
+        F & F & F & T & F & T & T \\
+        F & F & T & F & F & T & T \\
+        F & T & F & T & F & T & T \\
+        F & T & T & F & F & T & T \\
+        T & F & F & T & F & T & T \\
+        T & F & T & F & F & T & T \\
+        T & T & F & T & T & F & T \\
+        T & T & T & F & T & F & F
+    \end{tabular}
+    \end{center}
+
+    \subsubsection*{Example 1.2.3: Determine whether the following arguments are valid.}
+
+    Determine whether the following argument is valid.
+
+    \begin{itemize}
+        \item Let $P$ stand for the statement "John is stupid" and $Q$ for "John is lazy". Then we can represent the argument symbolically as follows:
+        \begin{center}
+        \begin{tabular}{ l }
+            $(\neg P \wedge Q) \vee P$ \\
+            $P$ \\ \hline
+            $\therefore \neg Q$
+        \end{tabular}
+        \end{center}
+    \end{itemize}
+
+    Now we make a truth table for both premises and the conclusion.
+
+    \begin{center}
+    \begin{tabular}{ c c c c c }
+            &     & \multicolumn{2}{c}{Premises}     & \multicolumn{1}{c}{Conclusion} \\
+        $P$ & $Q$ & $(\neg P \wedge Q) \vee P$ & $P$ & $\neg Q$                       \\ \hline
+        F   & F   & F                          & F   & T                              \\
+        F   & T   & T                          & F   & F                              \\
+        T   & F   & T                          & T   & T                              \\
+        T   & T   & T                          & T   & F                             
+    \end{tabular}
+    \end{center}
+
+    The argument is invalid since in the last line the two premises are true but the conclusion is false thus contradicting the essence of a valid argument stating that for an argument to be valid the premises cannot all be true without the conclusion being true as well.
 \end{document}
     

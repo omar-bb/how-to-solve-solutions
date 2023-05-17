@@ -4,6 +4,7 @@
 \usepackage[letterpaper, margin=1in]{geometry} % Page layout
 \usepackage{amsmath, amssymb} % Math packages
 \usepackage{enumitem} % Package for customizing lists
+\usepackage{booktabs}
 
 % Customization of enumeration environment
 \setlist[enumerate]{label=\arabic*., leftmargin=*, topsep=2pt, partopsep=2pt, parsep=2pt, itemsep=2pt}
@@ -13,6 +14,8 @@
 \pagestyle{fancy}
 \lhead{} % Empty left header
 \rhead{Date: \today} % Right header content (change "\today" to desired date format)
+
+\setlength{\parindent}{0pt}
 
 \begin{document}
     \section{Deductive Reasoning and Logical Connectives} % Exercise set title (unnumbered)
@@ -147,8 +150,11 @@
             \textbf{Reasoning is valid:} https://math.stackexchange.com/questions/1120978/propositional-logic-problem-sales-expenses-and-happiness-of-the-boss
 
         \end{itemize}
+
     \end{enumerate}
+
     \newpage
+
     \section{Truth Tables}
     \subsection*{Examples}
 
@@ -213,5 +219,270 @@
     \end{center}
 
     The argument is invalid since in the last line the two premises are true but the conclusion is false thus contradicting the essence of a valid argument stating that for an argument to be valid the premises cannot all be true without the conclusion being true as well.
+
+    The other one is pretty similar... in the second example we concluded that formulas can be equilavent for example $(\neg P \wedge Q) \vee P = P \vee Q$
+
+    \newpage
+
+    \textbf{DeMorgan’s laws:}
+    \begin{itemize}[itemsep=5pt,parsep=0pt,topsep=5pt]
+        \item \begin{center}$\neg(P \land Q)$ is equivalent to $\neg P \lor \neg Q$.\end{center}
+        \item \begin{center}$\neg(P \lor Q)$ is equivalent to $\neg P \land \neg Q$.\end{center}
+    \end{itemize}
+    
+    \textbf{Commutative laws:}
+    \begin{itemize}[itemsep=5pt,parsep=0pt,topsep=5pt]
+        \item \begin{center}$P \land Q$ is equivalent to $Q \land P$.\end{center}
+        \item \begin{center}$P \lor Q$ is equivalent to $Q \lor P$.\end{center}
+    \end{itemize}
+    
+    \textbf{Associative laws:}
+    \begin{itemize}[itemsep=5pt,parsep=0pt,topsep=5pt]
+        \item \begin{center}$P \land (Q \land R)$ is equivalent to $(P \land Q) \land R$.\end{center}
+        \item \begin{center}$P \lor (Q \lor R)$ is equivalent to $(P \lor Q) \lor R$.\end{center}
+    \end{itemize}
+    
+    \textbf{Idempotent laws:}
+    \begin{itemize}[itemsep=5pt,parsep=0pt,topsep=5pt]
+        \item \begin{center}$P \land P$ is equivalent to $P$.\end{center}
+        \item \begin{center}$P \lor P$ is equivalent to $P$.\end{center}
+    \end{itemize}
+    
+    \textbf{Distributive laws:}
+    \begin{itemize}[itemsep=5pt,parsep=0pt,topsep=5pt]
+        \item \begin{center}$P \land (Q \lor R)$ is equivalent to $(P \land Q) \lor (P \land R)$.\end{center}
+        \item \begin{center}$P \lor (Q \land R)$ is equivalent to $(P \lor Q) \land (P \lor R)$.\end{center}
+    \end{itemize}
+    
+    \textbf{Absorption laws:}
+    \begin{itemize}[itemsep=5pt,parsep=0pt,topsep=5pt]
+        \item \begin{center}$P \lor (P \land Q)$ is equivalent to $P$.\end{center}
+        \item \begin{center}$P \land (P \lor Q)$ is equivalent to $P$.\end{center}
+    \end{itemize}
+    
+    \textbf{Double Negation law:}
+    \begin{itemize}[itemsep=5pt,parsep=0pt,topsep=5pt]
+        \item \begin{center}$\neg\neg P$ is equivalent to $P$.\end{center}
+    \end{itemize}
+    
+    \subsection*{Example 1.2.5}
+
+    \begin{align*}
+        1. &\quad \neg (P \lor \neg Q) \\
+        &\quad = \neg P \land \neg \neg Q \\
+        &\quad = \neg P \land Q \\
+        % Add more steps as needed
+        2. &\quad \neg (Q \land \neg P) \lor P \\
+        &\quad = \neg Q \lor \neg \neg P \lor P \\
+        &\quad = \neg Q \lor P \lor P \\
+        &\quad = \neg Q \lor P \\
+        % Add more steps as needed
+    \end{align*}
+
+    Some equivalences are based on the fact that certain formulas are either always true or always false. For example, you can verify by making a truth table that the formula $Q \land (P \lor \neg P)$ is equivalent to just $Q$. But even before you make the truth table, you can probably see why they are equivalent. In every line of the truth table, $P \lor \neg P$ will come out true, and therefore $Q \land (P \lor \neg P)$ will come out true when $Q$ is also true, and false when $Q$ is false. Formulas that are always true, such as $P \lor \neg P$, are called tautologies. Similarly, formulas that are always false are called contradictions. For example, $P \land \neg P$ is a contradiction.
+
+    \newpage
+    \subsection*{Example 1.2.6}
+    \begin{table}[htbp]
+        \label{tab:logical_table}
+        \begin{tabular}{cccccc}
+            $P$ & $Q$ & $P \lor (Q \lor \neg P)$ & $P \land \neg(Q \lor \neg Q)$ & $P \lor \neg(Q \lor \neg Q)$ \\
+            \midrule
+            F   & F   & T                       & F                           & F                           \\
+            F   & T   & T                       & F                           & F                           \\
+            T   & F   & T                       & F                           & T                           \\
+            T   & T   & T                       & F                           & T                           \\
+        \end{tabular}
+    \end{table}
+
+    From the truth table we can conclude that the first statement is \emph{tautologies} since it's always true, the second is a \emph{contradiction} since it is always false and the third is neither. \\
+
+    \textbf{Tautology laws:}
+    \begin{itemize}[itemsep=5pt,parsep=0pt,topsep=5pt]
+        \item \begin{center}$P \land (\text{tautology})$ is equivalent to $P$.\end{center}
+        \item \begin{center}$P \lor (\text{tautology})$ is a tautology.\end{center}
+        \item \begin{center}$\neg(\text{tautology})$ is a contradiction.\end{center}
+    \end{itemize}
+
+    \textbf{Contradiction laws:}
+    \begin{itemize}[itemsep=5pt,parsep=0pt,topsep=5pt]
+        \item \begin{center}$P \land (\text{contradiction})$ is a contradiction.\end{center}
+        \item \begin{center}$P \lor (\text{contradiction})$ is equivalent to $P$.\end{center}
+        \item \begin{center}$\neg(\text{contradiction})$ is a tautology.\end{center}
+    \end{itemize}
+
+    \subsection*{1.2.7}
+
+    \begin{align*}
+        1. &\quad P \lor (Q \land \neg P) \\
+        &\quad = (P \lor Q) \land (P \lor \neg P) \\
+        &\quad = (P \lor Q) \land \textbf{T} \\
+        &\quad = P \lor Q \\
+        % Add more steps as needed
+        2. &\quad \neg (P \lor (Q \land \neg R)) \land Q \\
+        &\quad = (\neg P \land \neg (Q \land \neg R)) \land Q \\
+        &\quad = (\neg P \land (\neg Q \lor R)) \land Q \\
+        &\quad = \neg P \land ((\neg Q \lor R) \land Q) \\
+        &\quad = \neg P \land ((Q \land \neg Q) \lor (Q \land R)) \\
+        &\quad = \neg P \land (\textbf{F} \lor (Q \land R)) \\
+        &\quad = \neg P \land (Q \land R) \\
+        % Add more steps as needed
+    \end{align*}
+
+    \newpage
+
+    \subsection*{Exercises} % Section for exercises (unnumbered)
+    
+    \begin{enumerate}
+        \item \textbf{Exercise 1:}
+        \begin{itemize}
+            \item[(a)] The truth table for the formula $\neg P \lor Q$,
+            \begin{center}
+            \begin{tabular}{cccc}
+                $P$ & $Q$ & $\neg P$ & $\neg P \lor Q$ \\
+                \hline
+                F & F & T & T \\
+                F & T & T & T \\
+                T & F & F & F \\
+                T & T & F & T \\
+            \end{tabular}
+            \end{center}
+            \item[(b)] The truth table for the formula $(S \lor G) \land (\neg S \lor \neg G)$,
+            \begin{center}
+            \begin{tabular}{ccccccc}
+                $S$ & $G$ & $\neg S$ & $\neg G$ & $S \lor G$ & $\neg S \lor \neg G$ & $(S \lor G) \land (\neg S \lor \neg G)$ \\
+                \hline
+                F & F & T & T & F & T & F \\
+                F & T & T & F & T & T & T \\
+                T & F & F & T & T & T & T \\
+                T & T & F & F & T & F & F \\
+            \end{tabular}
+            \end{center}
+        \end{itemize} 
+        \item \textbf{Exercice 2:}
+        \begin{itemize}
+            \item[(a)] First let's simplify the formula we have,
+            \begin{equation} 
+                \begin{split}
+                    \neg [P \land (Q \lor \neg P)] & = \neg [(P \land Q) \lor (P \land \neg P)] \\
+                    & = \neg [(P \land Q) \lor \textbf{F}] \\
+                    & = \neg (P \land Q) \\
+                    & = \neg P \lor \neg Q \\
+                \end{split}
+            \end{equation}
+            Thus the truth table of the formula $\neg [P \land (Q \lor \neg P)]$ is equivalent to the truth table of the second formula $\neg P \lor \neg Q$,
+
+            \begin{center}
+            \begin{tabular}{cccccc}
+                $P$ & $Q$ & $\neg P$ & $\neg Q$ & $\neg P \lor \neg Q$ & $\neg [P \land (Q \lor \neg P)]$ \\
+                \hline
+                F & F & T & T & T & T \\
+                F & T & T & F & T & T \\
+                T & F & F & T & T & T \\
+                T & T & F & F & F & F \\
+            \end{tabular}
+            \end{center}
+
+            \item[(b)] The truth table of the formula $(P \lor Q) \land (\neg P \lor R)$
+            \begin{center}
+            \begin{tabular}{ccccccc}
+                $P$ & $Q$ & $R$ & $\neg P$ & $P \lor Q$ & $\neg P \lor R$ & $(P \lor Q) \land (\neg P \lor R)$ \\
+                \hline
+                F & F & F & T & F & T & F \\
+                F & F & T & T & F & T & F \\
+                F & T & F & T & T & T & T \\
+                F & T & T & T & T & T & T \\
+                T & F & F & F & T & F & F \\
+                T & F & T & F & T & T & T \\
+                T & T & F & F & T & F & F \\
+                T & T & T & F & T & T & T \\
+            \end{tabular}
+            \end{center}
+        \end{itemize}
+    
+    \item \textbf{Exercice 3:}
+    \begin{itemize}
+        \item[(a)] The truth table of the formula $P \oplus Q$,
+        \begin{center}
+        \begin{tabular}{ccc}
+            $P$ & $Q$ & $P \oplus Q$ \\
+            \hline
+            F & F & F \\
+            F & T & T \\
+            T & F & T \\
+            T & T & F \\
+        \end{tabular}
+        \end{center}
+
+        \item[(b)] The formula $P \oplus Q$ is equivalent to the formula $(P \lor Q) \land \neg (P \land Q)$ and we can prove this claim with the following truth table,
+        \begin{center}
+        \begin{tabular}{ccccc}
+            $P$ & $Q$ & $P \lor Q$ & $(P \lor Q) \land \neg(P \land Q)$ & $P \oplus Q$ \\
+            \hline
+            F & F & F & F & F \\
+            F & T & T & T & T \\
+            T & F & T & T & T \\
+            T & T & T & F & F \\
+        \end{tabular}
+        \end{center}
+
+    \end{itemize}
+
+    \item \textbf{Exercice 4:}
+    \begin{itemize}
+        \item[(a)] The truth table of the formula $P \downarrow Q$,
+        \begin{center}
+            \begin{tabular}{ccc}
+                $P$ & $Q$ & $P \downarrow Q$ \\
+                \hline
+                F & F & T \\
+                F & T & F \\
+                T & F & F \\
+                T & T & F \\
+            \end{tabular}
+        \end{center}
+
+        \item[(b)] The formula $P \downarrow Q$ is equivalent to the formula $\neg (P \lor Q)$ and we can prove this claim with the following truth table,
+        \begin{center}
+            \begin{tabular}{cccc}
+                $P$ & $Q$ & $\neg(P \lor Q)$ & $P \downarrow Q$ \\
+                \hline
+                F & F & T & T \\
+                F & T & F & F \\
+                T & F & F & F \\
+                T & T & F & F \\
+            \end{tabular}
+        \end{center}
+
+        \item[(c)] The formula $\neg P$ is equivalent to the formula $P \downarrow P$, this can be proved by the following truth table,
+        \begin{center}
+            \begin{tabular}{cccc}
+                $P$ & $\neg P$ & $P \downarrow P$ \\
+                \hline
+                F & T & T \\
+                F & T & T \\
+                T & F & F \\
+                T & F & F \\
+            \end{tabular}
+        \end{center} 
+
+        The formula $P \lor Q$ is equivalent to the formula $\neg (P \downarrow Q)$, this can be proved by the following truth table,
+
+        \begin{center}
+        \begin{tabular}{ccccc}
+            $P$ & $Q$ & $P \lor Q$ & $\neg (P \downarrow Q)$ \\
+            \hline
+            F & F & F & T \\
+            F & T & T & F \\
+            T & F & T & F \\
+            T & T & T & F \\
+        \end{tabular}
+        \end{center}
+
+    \end{itemize}
+
+        
+    \end{enumerate}
+
 \end{document}
     

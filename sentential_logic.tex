@@ -479,6 +479,80 @@
         \end{tabular}
         \end{center}
 
+        The formula $P \land Q$ is equivalent to the formula $\neg P \downarrow \neg Q$, this can be proved by the following truth table, 
+
+        \begin{center}
+        \begin{tabular}{ccccc}
+            $P$ & $Q$ & $P \land Q$ & $\neg P \downarrow \neg Q$ \\
+            \hline
+            F & F & F & F \\
+            F & T & F & F \\
+            T & F & F & F \\
+            T & T & T & T \\
+        \end{tabular}
+        \end{center}
+
+    \end{itemize}
+
+    \item \textbf{Exercice 6:}
+    \begin{itemize}
+        \item[(a)] The truth table of the formula $P \mid Q$,
+        \begin{center}
+        \begin{tabular}{ccc}
+            $P$ & $Q$ & $P \mid Q$ \\
+            \hline
+            F & F & T \\
+            F & T & T \\
+            T & F & T \\
+            T & T & F \\
+        \end{tabular}
+        \end{center}
+        \item[(b)] The formula $P \mid Q$ is equivalent to the formula $\neg (P \land Q)$, this can be proved by the following truth table,
+        \begin{center}
+        \begin{tabular}{cccc}
+            $P$ & $Q$ & $P \mid Q$ & $\neg (P \land Q)$ \\
+            \hline
+            F & F & T & T \\
+            F & T & T & T \\
+            T & F & T & T \\
+            T & T & F & F \\
+        \end{tabular}
+        \end{center}
+        \item[(c)] The formula $\neg P$ is equivalent to the formula $P \mid P$, this can be proved by the following truth table,
+        \begin{center}
+        \begin{tabular}{ccc}
+            $P$ & $\neg P$ & $P \mid P$ \\
+            \hline
+            F & T & T \\
+            T & F & F \\
+        \end{tabular}
+        \end{center}
+
+        The formula $P \lor Q$ is equivalent to the formula $\neg P \mid \neg Q$, this can be proved by the following truth table,
+        \begin{center}
+        \begin{tabular}{cccccc}
+            $P$ & $Q$ & $\neg P$ & $\neg Q$ & $P \lor Q$ & $\neg P \mid \neg Q$ \\
+            \hline
+            F & F & T & T & F & F \\
+            F & T & T & F & T & T \\
+            T & F & F & T & T & T \\
+            T & T & F & F & T & T \\
+        \end{tabular}
+        \end{center}
+
+        The formula $P \land Q$ is equivalent to the formula $\neg (P \mid Q)$, this can be proved by the following truth table,
+
+        \begin{center}
+        \begin{tabular}{cccc}
+            $P$ & $Q$ & $P \land Q$ & $\neg (P \mid Q)$ \\
+            \hline
+            F & F & F & F \\
+            F & T & F & F \\
+            T & F & F & F \\
+            T & T & T & T \\
+        \end{tabular}
+        \end{center}
+
     \end{itemize}
 
         

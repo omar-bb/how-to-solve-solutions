@@ -362,14 +362,14 @@
         \item \textbf{Exercice 2:}
         \begin{itemize}
             \item[(a)] First let's simplify the formula we have,
-            \begin{equation} 
+            \begin{equation*} 
                 \begin{split}
                     \neg [P \land (Q \lor \neg P)] & = \neg [(P \land Q) \lor (P \land \neg P)] \\
                     & = \neg [(P \land Q) \lor \textbf{F}] \\
                     & = \neg (P \land Q) \\
                     & = \neg P \lor \neg Q \\
                 \end{split}
-            \end{equation}
+            \end{equation*}
             Thus the truth table of the formula $\neg [P \land (Q \lor \neg P)]$ is equivalent to the truth table of the second formula $\neg P \lor \neg Q$,
 
             \begin{center}
@@ -555,7 +555,197 @@
 
     \end{itemize}
 
-        
+    \item \textbf{Exercice 8:}
+    \begin{center}
+    \begin{tabular}{ccccccc}
+        $P$ & $Q$ & $(P \land Q) \lor (\neg P \land \neg Q)$ & $\neg P \lor Q$ & $(P \lor \neg Q) \land (Q \lor \neg P)$ & $\neg (P \lor Q)$ & $(Q \land P) \lor \neg P$ \\
+        \hline
+        F & F & T & T & T & T & T \\
+        F & T & F & T & F & F & T \\
+        T & F & F & F & F & F & F \\
+        T & T & T & T & T & F & T \\
+    \end{tabular}
+    \end{center}
+
+    From the following truth table, $(P \land Q) \lor (\neg P \land \neg Q)$ and $(P \lor \neg Q) \land (Q \lor \neg P)$ are equivalent formulas and we also have $\neg P \lor Q$ and $(Q \land P) \lor \neg P$ that are also equivalent.
+
+    \item \textbf{Exercice 9:}
+    \begin{center}
+    \begin{tabular}{ccc}
+        $P$ & $Q$ & $(P \lor Q) \land (\neg P \lor \neg Q)$ \\
+        \hline
+        F & F & F \\
+        F & T & T \\
+        T & F & T \\
+        T & T & F \\
+    \end{tabular}
+    \end{center}
+
+    From the above truth table, this statement is neither a tautology nor a contradiction.
+
+    \begin{center}
+    \begin{tabular}{ccc}
+        $P$ & $Q$ & $(P \lor Q) \land (\neg P \land \neg Q)$ \\
+        \hline
+        F & F & F \\
+        F & T & F \\
+        T & F & F \\
+        T & T & F \\
+    \end{tabular}
+    \end{center}
+
+    From the above truth table, this statement is a contradiction.
+
+    \begin{center}
+    \begin{tabular}{ccc}
+        $P$ & $Q$ & $(P \lor Q) \lor (\neg P \lor \neg Q)$ \\
+        \hline
+        F & F & T \\
+        F & T & T \\
+        T & F & T \\
+        T & T & T \\
+    \end{tabular}
+    \end{center}
+
+    From the above truth table, this statement is a tautology.
+
+    \begin{center}
+    \begin{tabular}{cccccc}
+        $P$ & $Q$ & $R$ & $Q \lor \neg R$ & $P \land (Q \lor \neg R)$ & $[P \land (Q \lor \neg R)] \lor (\neg P \lor R)$ \\
+        \hline
+        F & F & F & T & F & T \\
+        F & F & T & F & F & T \\
+        F & T & F & T & F & T \\
+        F & T & T & T & F & T \\
+        T & F & F & T & T & T \\
+        T & F & T & F & F & T \\
+        T & T & F & T & T & T \\
+        T & T & T & T & T & T \\
+    \end{tabular}
+    \end{center}
+
+    From the above truth table, this statement is a tautology.
+
+    \item \textbf{Exercice 10:}
+
+    \begin{itemize}
+        \item[(a)] The truth table of $\neg (P \lor Q)$ and $\neg P \land \neg Q$ is,
+
+        \begin{center}
+        \begin{tabular}{ccccc}
+            $P$ & $Q$ & $\neg(P \lor Q)$ & $\neg P \land \neg Q$ \\
+            \hline
+            F & F & T & T \\
+            F & T & F & F \\
+            T & F & F & F \\
+            T & T & F & F \\
+        \end{tabular}
+        \end{center}
+
+        The results are equivalent for both formulas thus the formulas are equivalent, hence DeMorgan's second law has been proved to be true.
+
+        \item[(b)] The truth table of $P \land (Q \lor R)$ and $(P \land Q) \lor (P \land R)$ is,
+
+        \begin{center}
+        \begin{tabular}{ccccc}
+            $P$ & $Q$ & $R$ & $P \land (Q \lor R)$ & $(P \land Q) \lor (P \land R)$ \\
+            \hline
+            F & F & F & F & F \\
+            F & F & T & F & F \\
+            F & T & F & F & F \\
+            F & T & T & F & F \\
+            T & F & F & F & F \\
+            T & F & T & T & T \\
+            T & T & F & T & T \\
+            T & T & T & T & T \\
+        \end{tabular}
+        \end{center}
+
+        The truth table of $P \lor (Q \land R)$ and $(P \lor Q) \land (P \lor R)$ is,
+
+        \begin{center}
+        \begin{tabular}{ccccc}
+            $P$ & $Q$ & $R$ & $P \lor (Q \land R)$ & $(P \lor Q) \land (P \lor R)$ \\
+            \hline
+            F & F & F & F & F \\
+            F & F & T & F & F \\
+            F & T & F & F & F \\
+            F & T & T & F & F \\
+            T & F & F & T & T \\
+            T & F & T & T & T \\
+            T & T & F & T & T \\
+            T & T & T & T & T \\
+        \end{tabular}
+        \end{center}
+
+        The results are equivalent for both formulas for both cases thus we can conclude that the distributive laws have been proved.
+
+    \end{itemize}
+
+    \item \textbf{Exercice 11:}
+    \begin{itemize}
+        \item[(a)] Simplifying the formula $\neg (\neg P \land \neg Q)$ will give us,
+        \begin{equation*} 
+            \begin{split}
+                \neg (\neg P \land \neg Q) & = \neg \neg P \lor \neg \neg Q \\
+                & = P \lor Q \\
+            \end{split}
+        \end{equation*}
+
+        \item[(b)] Simplifying the formula $(P \land Q) \lor (P \land \neg Q)$ will give us,
+        \begin{equation*} 
+            \begin{split}
+                (P \land Q) \lor (P \land \neg Q) & = P \land (Q \lor \neg Q) \\
+                & = P \land \textbf{T} \\
+                & = P \\
+            \end{split}
+        \end{equation*}
+
+        \item[(c)] Simplifying the formula $\neg (P \land \neg Q) \lor (\neg P \land Q)$ will give us,
+        \begin{equation*}
+            \begin{split}
+                \neg (P \land \neg Q) \lor (\neg P \land Q) & = (\neg P \lor \neg \neg Q) \lor (\neg P \land Q) \\
+                & = (\neg P \lor Q) \lor (\neg P \land Q) \\
+                & = Q \lor (\neg P \lor (\neg P \land Q)) \\
+                & = Q \lor \neg P \\
+            \end{split}
+        \end{equation*}
+
+    \end{itemize}
+
+    \item \textbf{Exercice 12:}
+    \begin{itemize}
+        \item[(a)] Simplifying the formula $\neg (\neg P \lor Q) \lor (P \land \neg R)$ will give us,
+        \begin{equation*}
+            \begin{split}
+                \neg (\neg P \lor Q) \lor (P \land \neg R) & = \neg (\neg P \lor Q) \lor (P \land \neg R) \\
+                & = (\neg \neg P \land \neg Q) \lor (P \land \neg R) \\
+                & = (P \land \neg Q) \lor (P \land \neg R) \\
+                & = P \land (\neg Q \lor \neg R) \\
+            \end{split}
+        \end{equation*}
+        \item[(b)] Simplifying the formula $\neg (\neg P \land Q) \lor (P \land \neg R)$ will give us,
+        \begin{equation*}
+            \begin{split}
+                \neg (\neg P \land Q) \lor (P \land \neg R) & = (\neg \neg P \lor \neg Q) \lor (P \land \neg R) \\
+                & = (P \lor \neg Q) \lor (P \land \neg R) \\
+                & = \neg Q \lor (P \lor (P \land \neg R)) \\
+                & = \neg Q \lor P \\
+            \end{split}
+        \end{equation*}
+        \item[(c)] Simplifying the formula $(P \land R) \lor [\neg R \land (P \lor Q)]$ will give us,
+        \begin{equation*}
+            \begin{split}
+                (P \land R) \lor [\neg R \land (P \lor Q)] & = (P \land R) \lor [(\neg R \land P) \lor (\neg R \land Q)] \\
+                & = [(P \land R) \lor (\neg R \land P)] \lor (\neg R \land Q) \\
+                & = [P \land (R \lor \neg R)] \lor (\neg R \land Q) \\
+                & = (P \land \textbf{F}) \lor (\neg R \land Q) \\
+                & = P \lor (\neg R \land Q) \\
+            \end{split}
+        \end{equation*}
+
+    \end{itemize}
+
     \end{enumerate}
 
 \end{document}

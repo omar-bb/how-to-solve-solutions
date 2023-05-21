@@ -555,6 +555,10 @@
 
     \end{itemize}
 
+    \item \textbf{Exercice 7:}
+
+    (a) and (c) are valid; (b) and (d) are invalid. 
+
     \item \textbf{Exercice 8:}
     \begin{center}
     \begin{tabular}{ccccccc}
@@ -714,6 +718,7 @@
     \end{itemize}
 
     \item \textbf{Exercice 12:}
+
     \begin{itemize}
         \item[(a)] Simplifying the formula $\neg (\neg P \lor Q) \lor (P \land \neg R)$ will give us,
         \begin{equation*}
@@ -729,7 +734,7 @@
             \begin{split}
                 \neg (\neg P \land Q) \lor (P \land \neg R) & = (\neg \neg P \lor \neg Q) \lor (P \land \neg R) \\
                 & = (P \lor \neg Q) \lor (P \land \neg R) \\
-                & = \neg Q \lor (P \lor (P \land \neg R)) \\
+                & = \neg Q \lor [P \lor (P \land \neg R)] \\
                 & = \neg Q \lor P \\
             \end{split}
         \end{equation*}
@@ -746,6 +751,42 @@
 
     \end{itemize}
 
+    \item \textbf{Exercice 13:}
+
+    Let's take the following formula $\neg P \land \neg Q$ by rearranging it a bit we get,
+    \begin{equation*}
+        \begin{split}
+            \neg P \land \neg Q & = \neg [\neg (\neg P \land \neg Q)] \\
+            & = \neg (P \lor Q)
+        \end{split}
+    \end{equation*}
+    Thus we have successfully derived the second DeMorgan's law from the first one and the double negation law.
+
+    \item \textbf{Exercice 14:}
+
+    First, let $E = P \land Q$, Simplifying the following formula $[P \land (Q \land R) \land S]$ we'll have, 
+
+    \begin{equation*}
+        \begin{split}
+            [P \land (Q \land R)] \land S & = [(P \land Q) \land R] \land S \\
+            & = (E \land R) \land S \\
+            & = E \land (R \land S) \\
+            & = (P \land Q) \land (R \land S) \\
+        \end{split}
+    \end{equation*}
+
+    \item \textbf{Exercice 15:}
+
+    For a statement containing $n$ letters, we'll have $2^{n}$ lines.
+
+    \item \textbf{Exercice 18:}
+
+    If the conclusion is a tautology (meaning that it is always true) then that doesn't mean that the argument is necessarily valid or invalid since it depends on the validity of the premises and their logical connection with the conclusion
+
+    On the other hand, if the conclusion is a contradiction (meaning that it is always false) then the argument will always be invalid regardless of the validity of the premises or their logical relationship with the conclusion
+
+    Regarding the premises, if one of them is a tautology then as we said in the case where the conclusion is a tautology it doesn't mean that the conclusion in this case is necessarily valid nor the other premises, but in the other hand in the case where one of the premises is a contradiction then the argument will always be invalid.
+    
     \end{enumerate}
 
 \end{document}

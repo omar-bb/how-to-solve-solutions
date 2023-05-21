@@ -1,3 +1,2 @@
 # how-to-solve-solutions
-
-If i made any typo feel free to make a PR i'll gladly push it.
+If I made any typo feel free to make a PR I'll gladly push it.

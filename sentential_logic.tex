@@ -5,6 +5,11 @@
 \usepackage{amsmath, amssymb} % Math packages
 \usepackage{enumitem} % Package for customizing lists
 \usepackage{booktabs}
+\usepackage{mathtools}
+
+\newcommand\Set[2]{\{\,#1\mid#2\,\}}
+\newcommand\SET[2]{\Set{#1}{\text{#2}}}
+
 
 % Customization of enumeration environment
 \setlist[enumerate]{label=\arabic*., leftmargin=*, topsep=2pt, partopsep=2pt, parsep=2pt, itemsep=2pt}
@@ -785,8 +790,96 @@
 
     On the other hand, if the conclusion is a contradiction (meaning that it is always false) then the argument will always be invalid regardless of the validity of the premises or their logical relationship with the conclusion
 
-    Regarding the premises, if one of them is a tautology then as we said in the case where the conclusion is a tautology it doesn't mean that the conclusion in this case is necessarily valid nor the other premises, but in the other hand in the case where one of the premises is a contradiction then the argument will always be invalid.
+    Regarding the premises, if one of them is a tautology then as we said in the case where the conclusion is a tautology it doesn't mean that the conclusion in this case is necessarily valid nor the other premises, but on the other hand in the case where one of the premises is a contradiction then the argument will always be invalid.
     
+    \end{enumerate}
+
+    \section{Variable and Sets}
+
+    \subsection*{Exercises} % Section for exercises (unnumbered)
+    
+    \begin{enumerate}
+        \item \textbf{Exercise 1:}
+        \begin{itemize}
+            \item[(a)] Let $D(x)$ stand for "$x$ is divisible by 3", The entire statement would then be represented by the formula $D(6) \land D(9) \land D(15)$.
+            \item[(b)] Let $P(x, y)$ stand for "x is divisible by y", the entire statement would then be represented by the formula $P(x, 2) \land P(x, 3) \land \neg P(x, 4)$.
+            \item[(c)] $P(x) \land P(y) \land [(D(x) \land \neg D(y)) \lor (D(y) \land \neg D(x))]$, where $P(x)$ stands for "$x$ is a natural number" and $D(x)$ stands for "$x$ is prime".
+        \end{itemize} 
+
+        \item \textbf{Exercise 2:}
+        \begin{itemize}
+            \item[(a)] $P(x) \land P(y) \land (D(x, y) \lor \neg D(x, y))$, where $P(x)$ means "$x$ is a men" and $D(x, y)$ means "$x$ is taller than $y$".
+            \item[(b)] $(P(x) \lor P(y)) \land (D(x) \lor D(y))$, where $P(x)$ means "$x$ has brown eyes" and $D(x)$ means "$x$ has red hair".
+            \item[(c)] $(P(x) \land D(x)) \lor (P(y) \land D(y))$, where $P(x)$ means "$x$ has brown eyes" and $D(x)$ means "$x$ has red hair".
+        \end{itemize}
+
+        \item \textbf{Exercise 3:}
+        \begin{itemize}
+            \item[(a)] 
+            \begin{equation}
+                \SET{x}{$x$ is a planet}
+            \end{equation}
+            \item[(b)] 
+            \begin{equation}
+                \SET{x}{$x$ is a university}
+            \end{equation}
+            \item[(c)] 
+            \begin{equation}
+                \SET{x}{$x$ is a state}
+            \end{equation}
+            \item[(d)] 
+            \begin{equation}
+                \SET{x}{$x$ is a canadian province}
+            \end{equation}
+        \end{itemize}
+
+        \item \textbf{Exercise 4:}
+        \begin{itemize}
+            \item[(a)] 
+            \begin{equation*}
+                \Set{x^2}{x \in \mathbb{N}} \\
+            \end{equation*}
+            \begin{equation*}
+                \Set{x}{\sqrt{x} \in \mathbb{N}}
+            \end{equation*}
+            \item[(b)]
+            \begin{equation*}
+                \Set{2^x}{x \in \mathbb{N}}
+            \end{equation*}
+            \begin{equation*}
+                \Set{x}{\exists y \in \mathbb{N} : 2^y = x} 
+            \end{equation*}
+            \item[(c)]
+            \begin{equation*}
+                \Set{x}{x \in \mathbb{N} : x \in [10, 19]}
+            \end{equation*}
+        \end{itemize}
+
+        \item \textbf{Exercise 5:}
+        \begin{itemize}
+            \item[(a)] 
+            \begin{equation*}
+                -3 \in \Set{x \in \mathbb{R}}{x > 6}    
+            \end{equation*} 
+            \begin{equation*}
+                (-3 \in \mathbb{R}) \land (13 - 2(-3) > 1)
+            \end{equation*}
+            In this case, $x$ is a bound variable and there are no free variables, and this statement is false since $-3 \ngtr 6$.
+            \item[(b)]
+            \begin{equation*}
+                4 \in \Set{x \mathbb{R}^{-}}{x > 6}
+            \end{equation*}
+            \begin{equation*}
+                [(4 \in \mathbb{R}) \land (4 < 0)] \land (13 - 2 \cdot 4 > 1)
+            \end{equation*}
+            In this case, $x$ is a bound variable and there are no free variables, and the statement is false since $4 \notin \mathbb{R}^{-}$.
+            \item[(c)]
+            \begin{equation*}
+                \neg [(5 \in \mathbb{R}) \land (13 - 2 \cdot 5 > c)]
+            \end{equation*}
+            In this case, $x$ is a bound variable and $c$ is a bound variable. The truth of the statement depends on the value of the free variable $c$.
+        \end{itemize}
+
     \end{enumerate}
 
 \end{document}
